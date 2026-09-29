@@ -1,8 +1,12 @@
 N = int(input())
 array = [i for i in range(2, N + 1)]
-copy1, copy2 = array, array
-for i in copy1:
-    for x in copy2:
-        if i != x and x % i == 0:
+for i in array[:]:
+    if i * i > N:
+        break
+    if i not in array:
+        continue
+    for x in array[:]:
+        if x != i and x % i == 0:
             array.remove(x)
+
 print(array)
