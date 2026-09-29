@@ -1,12 +1,12 @@
+def solve(n):
+    d = 1
+    while n > 9 * 10 ** (d - 1) * d:
+        n -= 9 * 10 ** (d - 1) * d
+        d += 1
+    first = 10 ** (d - 1)
+    number = first + (n - 1) // d
+    return str(number)[(n - 1) % d]
+
+
 N = int(input())
-length = 1
-start = 1
-count = 9
-while N > length * count:
-    N -= length * count
-    length += 1
-    start *= 10
-    count *= 10
-number = start + (N - 1) // length
-index = (N - 1) % length
-print(str(number)[index])
+print(solve(N))
