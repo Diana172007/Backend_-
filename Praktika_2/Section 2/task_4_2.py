@@ -12,7 +12,6 @@ def generate_password():
         в функцию ничего не передаеться
     Returns:
         str: функция возращает строку , являющаяся паролем
-
     """
     alphabet_new = alphabet + alphabet_upper + numbers + special
     length = random.randint(8, 1000)
